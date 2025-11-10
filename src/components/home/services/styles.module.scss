@@ -1,0 +1,142 @@
+.containerAbout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 34px 0;
+  padding-top: 54px;
+}
+
+.innerAbout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+
+  p {
+    line-height: 150%;
+    color: #fff;
+  }
+}
+
+.containerAbout {
+  .title {
+    font-size: 34px;
+    color: #fff;
+    align-items: center;
+  }
+}
+
+.bannerAbout {
+  position: relative;
+  width: 370px;
+  height: 450px;
+}
+
+.imageAbout {
+  object-fit: cover;
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+}
+
+@media (min-width: 640px) {
+  .containerAbout {
+    flex-direction: row;
+    gap: 34px;
+
+    .title {
+      align-self: flex-start;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .innerAbout {
+    p {
+      width: 80%;
+      align-self: flex-start;
+    }
+  }
+
+  .bannerAbout {
+    width: 490px;
+    height: 420px;
+  }
+}
+
+// HQ AREA
+
+.hqTitle {
+  text-decoration: uppercase;
+  color: #fff;
+  margin: 40px 0 24px 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+.hqs {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.hq p {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.4s;
+}
+.innerHq {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageHq {
+  object-fit: cover;
+  border-radius: 8px;
+  width: 280px;
+  height: 350px;
+  transition: all 0.4s;
+}
+
+.innerHq:hover {
+  .imageHq {
+    transform: scale(1.2);
+  }
+
+  + p {
+    font-weight: bold;
+  }
+}
+
+// RESPONSIVE HQ AREA
+
+@media (min-width: 640px) {
+  .hqs {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .innerHq {
+    width: 280px;
+    height: 200px;
+  }
+
+  .hqTitle {
+    margin-top: 54px;
+    font-size: 30px;
+    gap: 4px;
+  }
+}
