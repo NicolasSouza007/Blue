@@ -5,8 +5,13 @@ import Link from "next/link";
 
 import { X, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
+import { MenuProps } from "@/menu.type";
 
-export function Submenu() {
+interface SubMenuProp {
+  menu: MenuProps;
+}
+
+export function Submenu({ menu }: SubMenuProp) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {

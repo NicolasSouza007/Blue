@@ -31,9 +31,20 @@
   justify-content: center;
 }
 
-.item{
-    display: flex;
-    gap: 14px;
-    align-items: center;
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
 
+.copyText {
+  margin-top: 64px;
+  color: #fff;
+  font-size: 14px;
+}
+
+@media (min-width: 640px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
 }
