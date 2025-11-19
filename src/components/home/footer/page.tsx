@@ -31,11 +31,6 @@ export function Footer({ object }: HomeProps) {
           </article>
         </div>
       </section>
-
-      <p className={styles.copyText}>
-        Todos os direitos reservados {object.title} @
-        {`${new Date().getFullYear()}`}
-      </p>
     </footer>
   );
 }

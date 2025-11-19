@@ -41,12 +41,11 @@ export function Submenu({ menu }: SubMenuProp) {
             <X size={54} color="#121212" />
           </button>
         )}
-        <li>
-          <Link href="/post/pagina1">Página 1</Link>
-        </li>
-        <li>
-          <Link href="/post/pagina2">Página 2</Link>
-        </li>
+        {menu.objects.map((item) => (
+          <li key={item.slug}>
+            <Link href={`/post/${item.slug}`}>{item.title}</Link>
+          </li>
+        ))}
       </ul>
     </section>
   );
